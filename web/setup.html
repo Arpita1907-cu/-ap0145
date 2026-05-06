@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PsycheNova AI — Setup</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, sans-serif;
+      background: #0f172a;
+      color: #e0f2fe;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 2rem 1.25rem; }
+    a { color: #22d3ee; }
+    pre {
+      background: rgba(2, 6, 23, 0.65);
+      border: 1px solid rgba(251, 191, 36, 0.25);
+      border-radius: 12px;
+      padding: 1rem;
+      overflow-x: auto;
+      color: #bae6fd;
+      font-size: 0.85rem;
+    }
+    h1 { font-size: 1.4rem; }
+    h2 { font-size: 1.1rem; color: #fbbf24; margin-top: 1.5rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p><a href="index.html">← Back to launcher</a></p>
+    <h1>First-time setup</h1>
+    <p>In the project folder (where <code>app.py</code> lives):</p>
+    <pre>python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py</pre>
+    <p>Then use <a href="http://127.0.0.1:8501/">http://127.0.0.1:8501/</a> or open <code>web/index.html</code> again.</p>
+
+    <h2>Share on your network (optional)</h2>
+    <pre>streamlit run app.py --server.address 0.0.0.0 --server.port 8501</pre>
+    <p>Others on the same Wi‑Fi: <code>http://&lt;your-ip&gt;:8501</code></p>
+
+    <h2>Preview static pages over HTTP (optional)</h2>
+    <pre>python3 -m http.server 8080</pre>
+    <p><a href="http://localhost:8080/web/index.html">http://localhost:8080/web/index.html</a></p>
+  </div>
+</body>
+</html>

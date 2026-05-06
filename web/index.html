@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PsycheNova AI — Opening…</title>
+  <!-- Static HTML cannot run Python; the real app is Streamlit on port 8501 -->
+  <meta http-equiv="refresh" content="0;url=http://127.0.0.1:8501/" />
+  <style>
+    :root { --cyan: #22d3ee; --text: #e0f2fe; --muted: #94a3b8; --gold: #fbbf24; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(1200px 800px at 20% 0%, #1e1b4b 0%, #0f172a 45%, #020617 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .wrap { max-width: 520px; margin: 0 auto; padding: 2rem 1.25rem; }
+    .card {
+      background: linear-gradient(145deg, rgba(15,23,42,0.95), rgba(30,27,75,0.8));
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: 18px;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+    }
+    .logo {
+      display: block;
+      max-width: 200px;
+      height: auto;
+      margin: 0 auto 1rem;
+      border-radius: 12px;
+    }
+    h1 { font-size: 1.35rem; margin: 0 0 0.5rem; color: #e0f2fe; }
+    .lead { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .btn {
+      display: inline-block;
+      margin: 0.25rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #312e81, #4f46e5 60%, #0ea5e9);
+      color: #ecfeff !important;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid rgba(56, 189, 248, 0.55);
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.35);
+    }
+    .btn:hover { filter: brightness(1.08); }
+    .muted { font-size: 0.85rem; color: var(--muted); margin-top: 1.25rem; }
+    code {
+      font-family: ui-monospace, Menlo, monospace;
+      background: rgba(2, 6, 23, 0.65);
+      padding: 0.15rem 0.4rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      color: #bae6fd;
+    }
+    details { margin-top: 1.25rem; text-align: left; color: var(--muted); font-size: 0.88rem; }
+    summary { cursor: pointer; color: var(--gold); margin-bottom: 0.5rem; }
+    a.link { color: var(--cyan); }
+  </style>
+  <script>
+    (function () {
+      var u = "http://127.0.0.1:8501/";
+      try { window.location.replace(u); } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <img
+        class="logo"
+        src="c3279092-b906-45b5-bdfe-1f6d7b8e03a0.jpeg"
+        alt="Brain Buzz"
+        width="200"
+        height="200"
+      />
+      <h1>PsycheNova AI</h1>
+      <p class="lead">Opening the app in your browser…</p>
+      <a class="btn" href="http://127.0.0.1:8501/">Open PsycheNova AI</a>
+      <p class="muted">
+        If nothing opens, start the server in Terminal from the project folder:<br />
+        <code>streamlit run app.py</code>
+      </p>
+      <details>
+        <summary>First-time setup &amp; tips</summary>
+        <p>
+          This file is only a launcher. The quiz runs in Streamlit at port <strong>8501</strong>.
+          Full install steps: <a class="link" href="setup.html">setup.html</a>
+        </p>
+      </details>
+    </div>
+  </div>
+</body>
+</html>
